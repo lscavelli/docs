@@ -26,7 +26,8 @@ Installation
 
     Si presume che, sia in locale che su uno spazio hosting Linux con accesso SSH,
     siano installati i pacchetti Node.js - Npm - Bower - PHP - Composer.
-    Una valida alternativa sarebbe quella di installare Homestead
+    Una valida alternativa sarebbe quella di installare Homestead che dispone di tutto
+    il necessario.
 
 Su una macchina di sviluppo
 ----------------------------
