@@ -25,7 +25,7 @@ Installation
 ============
 
     Si presume che, sia in locale che su uno spazio hosting Linux con accesso SSH,
-    sulla macchina siano installati i pacchetti Node.js - Npm - Bower - PHP - Composer.
+    siano installati i pacchetti Node.js - Npm - Bower - PHP - Composer.
     Una valida alternativa sarebbe quella di installare Homestead
 
 Su una macchina di sviluppo
