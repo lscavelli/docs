@@ -168,7 +168,7 @@ Contributing
 ============
 
     Per contribuire al progetto dovrai installare in locale newportal seguendo
-    la `procedura di installer<http://newportal.readthedocs.io/it/latest/overview.html#installation>`_ indicata nella presente guida.
+    la `procedura di installer <#installation>`_ indicata nella presente guida.
     Dovrai installare anche tutte le dipendenze di back end e front end, utilizzando
     rispettivamente Composer e bower.
     Gli errori, ma anche semplici suggerimenti, possono inoltre essere segnalati attraverso
