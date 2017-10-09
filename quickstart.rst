@@ -34,7 +34,7 @@ di visualizzazione.
 Esempio di modello di tipo lista abbinato ad una struttura composta da un solo contenuto
 variabile: es. $np714bc8ec8c2a4929bee9319dd31a1207
 
-.. container:: custom
+.. code-block:: bash
     <li class="articles clearfix content_divisor">
         <a href="{!! $np_href !!}" class="content_title">{!! $np_title !!}</a><br />
         <span class="image left"><img src="{!! $np_image !!}" alt="{!! $np_title !!}" class="img-responsive"></span>
@@ -57,7 +57,7 @@ variabile: es. $np714bc8ec8c2a4929bee9319dd31a1207
 Il modello oprecedente, applicabile dinamicamente al contenuto, consente di visualizzare l'immagine e le
 categorie abbinate al contenuto web
 
-.. container:: custom
+.. code-block:: bash
     <li class="block-hover">
         <a href="{{ $np_href }}" class="content_title">{!! $np_title !!}</a>
         <div style="font-size:9px">({!! $np_data_creazione !!})</div>
