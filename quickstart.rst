@@ -8,7 +8,7 @@ Se non hai ancora installato Newportal, vai alla pagina :ref:`installation`.
 Front end with portlets
 ================
 
-Una ``portlet`` è un componente modulare che aggrega contenuti informativi su una pagina web.
+Una **portlet** è un componente modulare che aggrega contenuti informativi su una pagina web.
 Una sorta di plug-in che lavora lato server e consente la pubblicazione di informazioni
 in porzioni di pagina.
 Tramite le portlets lo stesso contenuto è utilizzabile in più pagine o più volte nella
@@ -30,6 +30,40 @@ e complesse alle quali sarà possibile associare uno o più modelli (dynamic te
 Lato front-end le portlets possono estrarre Web Content che rispondano a determinate
 strutture (ex. news / eventi) ed assumere differenti aspetti in base al modello scelto
 di visualizzazione.
+
+Esempio di modello di tipo lista abbinato ad una struttura composta da un solo contenuto
+variabile: es. $np714bc8ec8c2a4929bee9319dd31a1207
+
+.. code-block:: html
+    <li class="articles clearfix content_divisor">
+        <a href="{!! $np_href !!}" class="content_title">{!! $np_title !!}</a><br />
+        <span class="image left"><img src="{!! $np_image !!}" alt="{!! $np_title !!}" class="img-responsive"></span>
+        <p>{!! \App\Libraries\sl_text::sommario(strip_tags($np714bc8ec8c2a4929bee9319dd31a1207)) !!}
+            @if(strlen(strip_tags($np714bc8ec8c2a4929bee9319dd31a1207))>255)
+                <a href="{!! $np_href !!}">Leggi ancora</a>
+            @endif
+        </p>
+        <p class="articles_meta">
+            @if(count($np_categories)>0)
+                @foreach($np_categories as $category)
+                    <a class="articles_category" href="/articles?category={!! $category->id !!}">#{!! $category->name !!}</a>,
+                @endforeach
+            @endif
+            Posted by <a href="/articles?author={!! $np_author_id !!}" class="articles_author">{!! $np_author_name !!}</a>
+            on <time datetime="{!! $np_data_creazione !!}">{!! $np_data_creazione !!}</time>
+        </p><br />
+    </li>
+
+Il modello oprecedente, applicabile dinamicamente al contenuto, consente di visualizzare l'immagine e le
+categorie abbinate al contenuto web
+
+.. code-block:: html
+    <li class="block-hover">
+        <a href="{{ $np_href }}" class="content_title">{!! $np_title !!}</a>
+        <div style="font-size:9px">({!! $np_data_creazione !!})</div>
+    </li>
+
+Una semplice lista con titolo linkabile e data dui creazione
 
 Dynamic Data List
 ================
@@ -90,6 +124,3 @@ registrato sarà rediretto alla pagina di login.
 L'attività degli utenti è registrata. Un utente non amministratore avrà accesso
 solo al registro della propria attività. Il sistema consente anche la visualizzazione
 delle sessioni attive con possibilità per l'utente amministratore di cancellarle.
-
-
-.. code-block:: php
