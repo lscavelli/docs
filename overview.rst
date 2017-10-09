@@ -26,8 +26,8 @@ Installation
 
     Si presume che, sia in locale che su uno spazio hosting Linux con accesso SSH,
     siano installati i pacchetti Node.js - Npm - Bower - PHP - Composer.
-    Una valida alternativa sarebbe quella di installare Homestead che dispone di tutto
-    il necessario.
+    Una valida alternativa sarebbe l'installazione di Homestead in quanto dispone di tutti
+    i pacchetti necessari.
 
 Su una macchina di sviluppo
 ----------------------------
@@ -133,6 +133,10 @@ Su uno spazio hosting Linux con accesso SSH
     cd httpdocs
     bower install
 
+    // credenziali per login - http://<domain-name>/login
+    username: admin@example.com
+    password: admin
+
 
 License
 =======
@@ -163,6 +167,18 @@ Licensed using the `MIT license <http://opensource.org/licenses/MIT>`_.
 Contributing
 ============
 
+    Per contribuire al progetto dovrai installare in locale newportal seguendo
+    la procedura di installer indicata nella presente guida.
+    Dovrai installare anche tutte le dipendenze di back end e front end, utilizzando
+    rispettivamente Composer e bower.
+    Gli errori, ma anche semplici suggerimenti, possono inoltre essere segnalati attraverso
+    il webform di contatto del sito web o l'email newportalclub@gmail.com.
 
-Guidelines
-----------
+    Se hai scoperto una vulnerabilità di protezione, sarebbe apprezzabile se
+    ci comunicassi con urgenza, all'indirizzo di posta elettronica newportalclub@gmail.com,
+    tutte le falle scoperte.
+
+    Potrai comunque contribuire al progetti in diversi ambiti: traduzione, analisi,
+    sviluppo, test di unità, grafica etc...
+
+    Il tuo aiuto risulterà comunque valido e apprezzato.
