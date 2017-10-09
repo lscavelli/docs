@@ -56,11 +56,11 @@ variabile: es. $np714bc8ec8c2a4929bee9319dd31a1207
         </p><br />
     </li>
 
-Il modello oprecedente, applicabile dinamicamente al contenuto, consente di visualizzare l'immagine e le
-categorie abbinate al contenuto web
+Il modello precedente, applicabile dinamicamente al contenuto, consente di visualizzare l'immagine e le categorie abbinate al contenuto web
 
 .. code-block:: html
    :linenos:
+
     <li class="block-hover">
         <a href="{{ $np_href }}" class="content_title">{!! $np_title !!}</a>
         <div style="font-size:9px">({!! $np_data_creazione !!})</div>
