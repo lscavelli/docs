@@ -6,7 +6,7 @@ Questa pagina fornisce una rapida introduzione a Newportal ed esempi introduttiv
 Se non hai ancora installato Newportal, vai alla pagina :ref:`installation`.
 
 Front end with portlets
-================
+=======================
 
 Una **portlet** è un componente modulare che aggrega contenuti informativi su una pagina web.
 Una sorta di plug-in che lavora lato server e consente la pubblicazione di informazioni
@@ -20,18 +20,21 @@ possibile disporre più portlets e ordinarle diversamente. Grazie al supporto
 al Drag-and-Drop, le pagine del portale potranno essere riorganizzate rapidamente.
 
 Web Content
-================
+===========
 
 I contenuti web sono contenuti strutturati che compongono le pagine del portale.
 Si basano essenzialmente sulle Strutture (form per l'acquisizione dei dati informativi)
-e sui Modelli (Viste di presentazione dei dati). Un tool visuale, basato su Formero,
+e sui Modelli (Viste di presentazione dei dati).
+Un tool visuale, basato su `Formeo <https://github.com/Draggable/formeo>`_,
 consente agevolmente di costruire, in base alle proprie esigenze, strutture semplici
 e complesse alle quali sarà possibile associare uno o più modelli (dynamic template).
 Lato front-end le portlets possono estrarre Web Content che rispondano a determinate
 strutture (ex. news / eventi) ed assumere differenti aspetti in base al modello scelto
-di visualizzazione.
+per la visualizzazione.
 
-Esempio di modello di tipo lista abbinato ad una struttura composta da un solo contenuto
+Per ogni struttura ``/admin/structure`` è possibile creare più modelli.
+
+Esempio di modello di tipo lista associato ad una struttura contenente solo un campo
 variabile: es. $np714bc8ec8c2a4929bee9319dd31a1207
 
 .. code-block:: html
@@ -56,7 +59,10 @@ variabile: es. $np714bc8ec8c2a4929bee9319dd31a1207
         </p><br />
     </li>
 
-Il modello precedente, applicabile dinamicamente al contenuto, consente di visualizzare l'immagine e le categorie abbinate al contenuto web
+Oltre ai dati principali, quali l'autore, l'immagine, il titolo etc..., la vista visualizza anche le categorie associate al contenuto web.
+Allo stesso modo potrebbe visualizzare i Tag a cui il content si riferisce.
+
+Nel successivo esempio è riportata una semplice lista che mostra il titolo linkabile e la data di creazione
 
 .. code-block:: html
    :linenos:
@@ -66,17 +72,27 @@ Il modello precedente, applicabile dinamicamente al contenuto, consente di visua
         <div style="font-size:9px">({!! $np_data_creazione !!})</div>
     </li>
 
-Una semplice lista con titolo linkabile e data dui creazione
+Nel prossimo esempio è riportata una vista base di un singolo contenuto web
+completo di titolo, autore, data di creazione e campo variabile.
+
+.. code-block:: html
+   :linenos:
+
+    <h3>{!! $np_title !!}</h3>
+    by <a href="/video?author={!! $np_author_id !!}" class="articles_author">{!! $np_author_name !!}</a>
+    on {!! $np_data_creazione !!}
+    <br /><br />
+    {!! $np714bc8ec8c2a4929bee9319dd31a1207 !!}
 
 Dynamic Data List
-================
+=================
 Attraverso i Dynamic Data List è possibile definire un elenco dati dinamico, ovvero
 un elenco di contenuti web basato sulla medesima struttura, esportabile nei diversi
 formati (excel, csv, xml, txt, etc...). Così come avviene per i Contenuti web, la
 creazione dei "Dynamic Data List" richiede l'impostazione di una struttura dati.
 
 Categorization
-================
+==============
 
 Newportal consente la creazione di più vocabolari per aggregare un numero quasi infinito
 di categorie omogenee.  I vocabolari possono essere associati a più servizi del
@@ -85,7 +101,7 @@ Contestualmente alle categorie è possibile definire e associare i tag, in modo 
 rendere i contenuti facilmente ritrovabili e filtrabili anche lato front-end.
 
 Frontend side
-----------------
+-------------
 
 Con l'uso di appositi widgets sarà possibile creare pagine web complete di menu
 di navigazione basati su vocabolari di categorie e tags. Gli elementi che aggregano
@@ -94,7 +110,7 @@ valori dei vocabolari definiti in configurazione o in base alla categoria passat
 nell'url, se la comunicazione tra portlets è stata abilitata.
 
 Pages, themes and layouts
-================
+=========================
 
 Newportal gestisce sia pagine pubbliche (accessibili a chiunque) che private. 
 Le pagine private sono accessibili solo agli utenti membri del sito che possiede
@@ -110,7 +126,7 @@ Con alcune piccole modifiche sarà possibile utilizzare themes e templates
 fully responsive facilmente reperibili su web
 
 User management
-================
+===============
 
 Dal pannello di controllo un amministratore può: gestire gli utenti del portale,
 raggruppandoli in team di lavoro o inserendoli in organizzazioni gerarchiche; 
