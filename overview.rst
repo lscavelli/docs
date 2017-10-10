@@ -167,18 +167,18 @@ Licensed using the `MIT license <http://opensource.org/licenses/MIT>`_.
 Contributing
 ============
 
-    Per contribuire al progetto dovrai installare in locale newportal seguendo
+    Per contribuire al progetto si dovrà installare in locale newportal seguendo
     la `procedura di installer <#installation>`_ indicata nella presente guida.
-    Dovrai installare anche tutte le dipendenze di back end e front end, utilizzando
+    Si dovranno installare anche tutte le dipendenze di backend e frontend, utilizzando
     rispettivamente Composer e bower.
-    Gli errori, ma anche semplici suggerimenti, possono inoltre essere segnalati attraverso
+
+    Gli errori, ma anche semplici suggerimenti, possono essere segnalati attraverso
     il webform di contatto del sito web o l'email newportalclub@gmail.com.
 
-    Se hai scoperto una vulnerabilità di protezione, sarebbe apprezzabile se
-    ci comunicassi con urgenza, all'indirizzo di posta elettronica newportalclub@gmail.com,
-    tutte le falle scoperte.
+    Sarebbe auspicabile che le vulnerabilità di protezione venissero segnalate con urgenza
+    esclusivamente all'indirizzo di posta elettronica newportalclub@gmail.com
 
-    Potrai comunque contribuire al progetti in diversi ambiti: traduzione, analisi,
-    sviluppo, test di unità, grafica etc...
+    E' comunque possibile contribuire al progetto in ambiti diversi dallo sviluppo, ovvero nella
+    traduzione, analisi, sviluppo, test di unità, design etc...
 
-    Il tuo aiuto risulterà comunque valido e apprezzato.
+    Ogni contributo risulterà sempre prezioso e utile allo sviluppo del progetto.
