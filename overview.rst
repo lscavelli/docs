@@ -171,6 +171,7 @@ Contributing
     la `procedura di installer <#installation>`_ indicata nella presente guida.
     Si dovranno installare anche tutte le dipendenze di backend e frontend, utilizzando
     rispettivamente Composer e bower.
+    Al termine dei lavori di integrazione/modifica sarà sufficiente aprire una pull request su GitHub
 
     Gli errori, ma anche semplici suggerimenti, possono essere segnalati attraverso
     il webform di contatto del sito web o l'email newportalclub@gmail.com.
@@ -178,7 +179,7 @@ Contributing
     Sarebbe auspicabile che le vulnerabilità di protezione venissero segnalate con urgenza
     esclusivamente all'indirizzo di posta elettronica newportalclub@gmail.com
 
-    E' comunque possibile contribuire al progetto in ambiti diversi dallo sviluppo, ovvero nella
-    traduzione, analisi, sviluppo, test di unità, design etc...
+    E' possibile contribuire al progetto anche in ambiti diversi dallo sviluppo software,
+    ovvero nella traduzione dei testi, nell'analisi, nell'eseguire test di unità, nel design etc...
 
-    Ogni contributo risulterà sempre prezioso e utile allo sviluppo del progetto.
+    Ogni contributo risulterà sempre prezioso e utile al miglioramento del progetto.
