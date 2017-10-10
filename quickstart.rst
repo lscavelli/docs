@@ -32,9 +32,10 @@ Lato front-end le portlets possono estrarre Web Content che rispondano a dete
 strutture (ex. news / eventi) ed assumere differenti aspetti in base al modello scelto
 per la visualizzazione.
 
-Per ogni struttura ``/admin/structure`` è possibile creare più modelli.
+Per ogni struttura ``/admin/structure`` è possibile creare più modelli. Di seguito si
+riportano alcuni esempi di viste dinamiche associate alle strutture formeo.
 
-Esempio di modello di tipo lista associato ad una struttura contenente solo un campo
+Esempio di modello di tipo lista associato ad una struttura contenente un solo campo
 variabile: es. $np714bc8ec8c2a4929bee9319dd31a1207
 
 .. code-block:: html
@@ -59,10 +60,10 @@ variabile: es. $np714bc8ec8c2a4929bee9319dd31a1207
         </p><br />
     </li>
 
-Oltre ai dati principali, quali l'autore, l'immagine, il titolo etc..., la vista visualizza anche le categorie associate al contenuto web.
-Allo stesso modo potrebbe visualizzare i Tag a cui il content si riferisce.
+Oltre all'autore, all'immagine e al titolo, la precedente vista visualizza anche le
+categorie associate ai singoli contenuti web. Allo stesso modo potrebbe visualizzare i Tag.
 
-Nel successivo esempio è riportata una semplice lista che mostra il titolo linkabile e la data di creazione
+Il successivo esempio riporta una lista semplificata contenente solo titolo e data di creazione.
 
 .. code-block:: html
    :linenos:
@@ -72,8 +73,7 @@ Nel successivo esempio è riportata una semplice lista che mostra il titolo link
         <div style="font-size:9px">({!! $np_data_creazione !!})</div>
     </li>
 
-Nel prossimo esempio è riportata una vista base di un singolo contenuto web
-completo di titolo, autore, data di creazione e campo variabile.
+Nel successivo esempio, invece, si fa riferimento ad una vista relativa ad un singolo contenuto web.
 
 .. code-block:: html
    :linenos:
