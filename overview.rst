@@ -20,7 +20,6 @@ Requirements
 
 .. _installation:
 
-
 Installation
 ============
 
@@ -168,7 +167,7 @@ Contributing
 ============
 
     Per contribuire al progetto si dovrà installare in locale newportal seguendo
-    la `procedura di installer <#installation>`_ indicata nella presente guida.
+    la :ref:`procedura di installer <installation>` indicata nella presente guida.
     Si dovranno installare anche tutte le dipendenze di backend e frontend, utilizzando
     rispettivamente Composer e bower.
     Al termine dei lavori di integrazione/modifica sarà sufficiente aprire una pull request su GitHub
