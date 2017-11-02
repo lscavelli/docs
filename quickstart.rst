@@ -5,6 +5,8 @@ Quickstart
 Questa pagina fornisce una rapida introduzione a Newportal ed esempi introduttivi.
 Se non hai ancora installato Newportal, vai alla pagina :ref:`installation`.
 
+.. _portlet:
+
 Front end with portlets
 =======================
 
@@ -52,10 +54,10 @@ variabile: es. $np714bc8ec8c2a4929bee9319dd31a1207
         <p class="articles_meta">
             @if(count($np_categories)>0)
                 @foreach($np_categories as $category)
-                    <a class="articles_category" href="/articles?category={!! $category->id !!}">#{!! $category->name !!}</a>,
+                    <a class="articles_category" href="/{!! $np_page !!}?category={!! $category->id !!}">#{!! $category->name !!}</a>,
                 @endforeach
             @endif
-            Posted by <a href="/articles?author={!! $np_author_id !!}" class="articles_author">{!! $np_author_name !!}</a>
+            Posted by <a href="/{!! $np_page !!}?author={!! $np_author_id !!}" class="articles_author">{!! $np_author_name !!}</a>
             on <time datetime="{!! $np_data_creazione !!}">{!! $np_data_creazione !!}</time>
         </p><br />
     </li>

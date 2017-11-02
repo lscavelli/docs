@@ -16,10 +16,6 @@ L'attuale revisione utilizza inoltre i seguenti pacchetti open source: AdminLTE 
 
   E' vivamente sconsigliato l'uso in produzione. Utilizzabile ai soli fini di sviluppo.
 
-.. code-block:: bash
-
-   git clone https://github.com/lscavelli/newportal.git newportal
-
 User Guide
 ==========
 
@@ -28,3 +24,4 @@ User Guide
 
     overview
     quickstart
+    portlets
