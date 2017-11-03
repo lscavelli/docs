@@ -2,7 +2,7 @@
 Portlets principali
 ===================
 
-Si è fatto cenno alle :ref:`Portlets <portlet>` come aggregatori di contenuti informativi su una pagina web Newportal.
+Nella pagina Quikstart si è fatto cenno alle :ref:`Portlets <portlet>` come elementi aggregatori di contenuti informativi su una pagina web Newportal.
 Le portlet attualmente disponibili sono:
 
 * :ref:`webcontent <webcontent>`;
