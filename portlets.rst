@@ -18,14 +18,15 @@ Webcontent portlet
 ==================
 
 La portlet webcontent consente di visualizzare a video un singolo contenuto web appartenente ad una qualsiasi struttura di dati.
-L'aspetto del contenuto dipenderà dal modello scelto per la sua visualizzazione.
-Il modello può essere impostato sia nell'editor del contenuto o direttamente nella finestra di configurazione della portlet.
-In base alla struttura del contenuto la finestra di configurazione mostrerà, per la selezione, diverse viste di tipo "base".
+L'aspetto del contenuto dipenderà dalla sua struttura dati e dal modello scelto per la sua visualizzazione.
+La scelta del modello può essere effettuata sia nell'editor del contenuto, sia nella finestra di configurazione della portlet.
+I modelli possono essere di due tipi: di tipo "lista", quelli utilizzabili nella portlet "contentList" per le righe di una lista; di tipo "base", applicabili al singolo contenuto ed utilizzabili nella portlet "webContent.
+I modelli selezionabili nella finestra di configurazione della portlet dipenderanno dalla struttura del contenuto selezionato.
 
-La portlet in fase di visualizzazione del contenuto utilizzerà il modello in base alla seguente ordine di priorità:
+In considerazione del fatto che è possibile impostare il modello in più parti, la portlet in fase di visualizzazione del contenuto, utilizzerà il modello in base alla seguente ordine di priorità:
 
-1. Modello selezionato nella portlet;
-2. Modello del contenuto selezionato;
+1. Modello impostato nella portlet;
+2. Modello impostato dell'editor del contenuto;
 3. Il primo modello della struttura del contenuto.
 
 Se il modello, per il contenuto selezionato, non è trovato, o non è stato impostato, il sistema mostrerà un messaggio di errore.
