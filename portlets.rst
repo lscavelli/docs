@@ -17,32 +17,32 @@ Le portlet attualmente disponibili sono:
 Webcontent portlet
 ==================
 
-La portlet webcontent consente di visualizzare a video un singolo contenuto web appartenente ad una qualsiasi struttura di dati.
-L'aspetto del contenuto dipenderà dalla sua struttura dati e dal modello scelto per la sua visualizzazione.
+La portlet webcontent consente la visualizzazione di un singolo contenuto web nella posizione in cui è posizionata la portlet. L'aspetto del contenuto dipenderà dalla sua struttura dati e dal modello (vista) scelto per la visualizzazione.
 La scelta del modello può essere effettuata sia nell'editor del contenuto, sia nella finestra di configurazione della portlet.
-I modelli possono essere di due tipi: di tipo "lista", quelli utilizzabili nella portlet "contentList" per le righe di una lista; di tipo "base", applicabili al singolo contenuto ed utilizzabili nella portlet "webContent.
-I modelli selezionabili nella finestra di configurazione della portlet dipenderanno dalla struttura del contenuto selezionato.
+I modelli possono essere di due tipi: di tipo "lista", quelli utilizzabili nella portlet "contentList" eslusivamente per le righe di una lista; di tipo "base", applicabili al singolo contenuto ed utilizzabili nella portlet "webContent.
+I modelli selezionabili nella finestra di configurazione della portlet dipenderanno dalla struttura dati del contenuto selezionato.
 
-In considerazione del fatto che è possibile impostare il modello in più parti, la portlet in fase di visualizzazione del contenuto, utilizzerà il modello in base alla seguente ordine di priorità:
+Poiché per lo stesso contenuto potrebbero essere impostati più modelli, la portlet in fase di visualizzazione del contenuto utilizzerà, nella scelta del modello, il seguente ordine di priorità:
 
 1. Modello impostato nella portlet;
-2. Modello impostato dell'editor del contenuto;
-3. Il primo modello della struttura del contenuto.
+2. Modello impostato nell'editor del contenuto;
+3. In assenza dei primi due, il primo modello appartenente alla struttura dati del contenuto.
 
-Se il modello, per il contenuto selezionato, non è trovato, o non è stato impostato, il sistema mostrerà un messaggio di errore.
+Se il modello non è trovato o non esistono modelli per la struttura del contenuto selezionato, il sistema mostrerà un messaggio di errore.
 
-Il contenuto da mostrare può essere impostato nella finestra di configurazione della portlet. In tal caso sarà fisso.
-Lo stesso contenuto informativo, attraverso questo tipo di portlet, può essere utilizzato in più pagine o più volte nella
-stessa pagina (Multi istanza), assumendo, in base al modello scelto, anche aspetti differenti.
+Lo stesso contenuto informativo, attraverso l'utilizzo di più portlet webcontent, può essere presente in più pagine del sito o più volte nella stessa pagina (in modalità multi istanza), assumendo, in base ai modelli scelti, differenti aspetti.
 
-Se la comunicazione è attiva (impostabile dalla finestra di configurazione) e nell'URL è presente lo slug di un content
-web valido, questo sarà ricercato e visualizzato nella portlet, indipendentemente dal contenuto fisso se impostato.
+Il contenuto da mostrare viene solitamente impostato nella finestra di configurazione della portlet. In tal caso sarà fisso.
+
+Se la comunicazione della portlet è attiva (impostabile dalla finestra di configurazione) e nell'URL è presente lo slug di un web content valido, questo sarà ricercato e visualizzato nella portlet, indipendentemente dal contenuto fisso impostato. In tal modo una portlet webContent potrebbe visualizzare di default un testo e dinamicamente un altro, in base allo slug del content passato nell'url. Se più portlet webcontent risultano presenti nella pagina è tutte hanno la comunicazione attiva, lo stesso contenuto informativo sarà mostrato in tutte le portlet.
 
 Il contenuto può essere presente nell'url nei seguenti modi:
 
-* http://<domain>/<page>/<slug-web-content>
-* http://<domain>?content=<slug-web-content>
+* http://<domain-name>/<page>/<slug-web-content>
+* http://<domain-name>?content=<slug-web-content>
+* http://<domain-name>/<slug-web-content>
 
+Quest'ultima ipotesi sarà attuabile solo e soltanto se risulterà direttamente assegnata al contenuto una pagina di visualizzazione con la presenza di una portlet webcontent impostata come "predefinita per questa pagina".
 
 .. _contentlist:
 
