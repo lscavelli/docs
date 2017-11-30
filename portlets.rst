@@ -20,7 +20,7 @@ Webcontent portlet
 ==================
 
 La portlet webcontent consente la visualizzazione di un singolo contenuto informativo nella posizione in cui è posizionata la portlet stessa. L'aspetto del contenuto dipenderà dalla sua struttura dati e dal modello (vista) scelto per la sua visualizzazione.
-Lo stesso contenuto informativo, attraverso l'uso di più portlet webcontent, può essere presente in più pagine del sito o più volte nella stessa pagina (in modalità multi istanza), assumendo, in base ai modelli scelti, differenti aspetti.
+Lo stesso contenuto informativo, attraverso l'uso di più portlet webcontent, può essere presente in più pagine del sito o più volte nella stessa pagina (in modalità multi istanza), assumendo, in base ai modelli scelti, differenti aspetti.
 
 La scelta del modello può essere effettuata sia nell'editor del contenuto, sia nella finestra di configurazione della portlet.
 
@@ -36,8 +36,8 @@ Poiché possono essere impostati, per lo stesso contenuto, più modelli, la port
 Se il modello non è trovato o non esistono modelli per la struttura del contenuto selezionato, il sistema mostrerà un messaggio di errore.
 
 Selezione manuale del contenuto
--------------------------------
-Il contenuto informativo che la portle visualizzerà, viene selezionato, nella modalità manuale, nel pannello di configurazione della portlet. Dopo aver scelto una struttura dati, la finestra mostrerà i contenuti informativi basati sulla struttura selezionata. Cliccare su aggiungi, per selezionate il contenuto.
+--------------------------------
+Il contenuto informativo da visualizzare nella portlet, viene selezionato, manualmente, nel pannello di configurazione della portlet. Dopo aver scelto una struttura dati, la finestra mostrerà i contenuti informativi basati sulla struttura selezionata. Cliccare su aggiungi, per selezionate il contenuto.
 
 Selezione dinamica del contenuto
 --------------------------------
@@ -54,43 +54,61 @@ Quest'ultima ipotesi sarà attuabile solo e soltanto se risulterà direttamente 
 
 Condivisione del contentuto
 ---------------------------
-Dal pannello di configurazione è possibile abilitare la condivisione del contenuto informativo sui principali social media. Se la condivisione risulta abilitata, compariranno, a fine testo, sulla destra, le icone dei social attualmente disponibili. Cliccando su queste si aprirà un popup che consentirà lo sharing del content sul rispettivi social. Se al contenuto informativo è associata un'immagine, questa sarà visualizzata nella finestra. Il format dipenderà dalla dimensione dell'immagine.
+Dal pannello di configurazione è possibile abilitare la condivisione del contenuto informativo sui principali social media. Se la condivisione é abilitata, compariranno, a fine testo, sulla destra, le icone dei social disponibili. Cliccando su queste icone si aprirà un popup che consentirà lo sharing del content web sui rispettivi social network. Se al contenuto informativo è stata associata un'immagine, questa comparirà nella finestra di condivisione del social network facebook.
 
-Abilitazione commenti
----------------------
-La portlet webcontent consente l'attivazione del modulo per l'invio e la visualizzazione dei commenti alla fine del contenuto informativo. I commenti, in base alla configurazione che si è scelta, possono essere moderati o immediatamente visibili. All'atto della registrazione di un nuovo commento, una notifica di tipo email parte all'autore del contenuto. I commenti possono essere gestiti nella sezione dei contenuti dal menu posto a destra in corrispondenza del contenuto interessato.
+Abilitazione dei commenti
+-------------------------
+La portlet webcontent consente l'attivazione del modulo per l'invio e la visualizzazione, a piè di pagina, dei commenti. I commenti, in base alla configurazione scelta, possono essere moderati o immediatamente visibili. All'atto della registrazione di un nuovo commento, una notifica di tipo email verrà inviata all'autore del contenuto. I commenti possono essere gestiti nella sezione dei contenuti, dal menu posto a destra in corrispondenza del contenuto interessato.
+
+Abilitazione del conteggio delle visite
+---------------------------------------
+Dal pannello di configurazione della portlet è possibile attivare il conteggio delle visite al contenuto informativo. Il numero complessivo delle visite può essere visualizzato nella sezione web content del cruscotto di amministrazione, in corrispondenza del contenuto interessato. Il dato sarà considerato dalla portlet contenlist per visualizzare la lista dei contenuti più popolari.
 
 .. _contentlist:
 
 Contentlist portlet
 ===================
 
-La portlet contentlist visualizza una lista di contenuti formattati in base al modello, di tipo list, scelto
-nel pannello di configurazione. Lo stile del contenitore (involucro della lista) è predefinito, ma è possibile
-modificarlo, selezionandolo dai template disponibili nella scheda "Altre impostazioni" del pannello di configurazione.
-Questi template sono inseriti nella cartella partials del tema scelto.
+La portlet contentlist consente di visualizzare una lista di contenuti formattata in base a determinati modelli scelti nel pannello di configurazione della portlet. Lo stile del contenitore esterno della lista è preimpostato sul modello "listAsset", ma può essere comodamente sostituito con altri modelli, anche custom, presenti nella cartella "view" della portlet "contentlist". In taluni casi si potrebbe aver bisogno di template generici legati espressamente al tema corrente. Questi ultimi sono raccolti nella cartella "partials"  del tema corrente e possono essere selezionati dalla scheda "Altre impostazioni" del pannello di configurazione della portlet.
 
-In questo modo la stessa lista può essere utilizzata in più pagine o più volte nella stessa pagina (Multi istanza),
-assumendo, in base ai modelli scelti, aspetti differenti.
+Attraverso questa portlet la stessa lista può essere utilizzata in più pagine o più volte nella stessa pagina (Multi istanza), assumendo, in base ai modelli scelti, aspetti differenti.
 
 Filtraggio in base ai Tags e Categorie
 --------------------------------------
-I contenuti della lista possono essere filtrati in base ai tags e categorie definite nel sito.
-La portlet contentlist in fase di visualizzazione imposterà i filtri in base al seguente ordine di priorità:
+I contenuti della lista possono essere filtrati in base ai tags e categorie definiti nel sito. Per l'impostazione dei filtri
+la portlet utilizzerà il seguente ordine di priorità:
 
-1. Parametri ``tag`` e ``category`` impostati nell'url (Se la comunicazione è attiva);
-2. Tags e categories del web content passato nella URL (Se la comunicazione è attiva);
+1. Parametri ``tag`` e ``category`` impostati nell'url (Se la comunicazione  della portlet è attiva);
+2. Tags e categories del contenuto passato nella URL tramite slug (Se la comunicazione della portletè è attiva);
 3. Tags e categories impostati dal pannello di configurazione della portlet (Se la comunicazione è disattiva o i punti precedenti non producono un risultato).
 
 Filtraggio in base alle strutture dati
 --------------------------------------
+La portlet contentlist consente di filtrare i contenuti informativi in base ad una particolare struttura dati definita nel pannello di configurazione della portlet. Non supporta la modalità dinamica.
 
 Filtraggio in base all'autore del contenuto
 -------------------------------------------
+Passando semplicemente nell'url parametro "author" con l'identificativo dell'autore, i contenuti informativi saranno filtrati in base all'autore. Questo filtro si aggiungerà agli altri filtri.
 
-Visualizzazione dei content più popolari
-----------------------------------------
+Visualizzazione dei contenti più popolari
+-----------------------------------------
+I contenuti informativi possono essere ordinati anche in base al numero delle visite. Se la direzione è discendente, in testa comparirà il contenuto con il maggior numero di visite, altrimenti il contenuto con il minor numero di visite.
 
 Ordinamento delle voci
 ----------------------
+Oltre che per "visite", i contenuti della lista possono essere ordinati per: - Inserimento; - Titolo; - Data di creazione; - Data di modifica. In abbinamento a questo parametro bisogna impostare anche la direzione (Ascendente, Discendente)
 
+Scrolling a destra e a sinistra
+-------------------------------
+Un'altra funzionalità importante della portlet è quella di visualizzare il link al contenuto precedente e successivo rispetto allo slug passato nella URL. La comunicazione della portlet dovrà essere attiva e si dovrà impostare il selettore Scrolling al valore desiderato.
+
+Abilitazione dei Feed
+---------------------
+Attraverso l'uso della portlet contentlist, i contenuti pubblicati sul sito possono essere resi disponibili anche in formato RSS (Really Simple Syndication ). Dal pannello di configurazione sarà necessario abilitare tale funzionalità e dopo aver inserito il Titolo del feed, il numero di elementi da visualizzare e scelto il formato da utilizzzare fra Atom 1.0,  Rss 2.0, la portlet riporterà, in basso a sinistra, una icona che consentirà l'estrapolazione del feed in formato XML.
+
+Il link può essere copiato e incollato in un aggregatore di feed (Reader).
+I feed  consentono di notificare la pubblicazione di un nuovo contenuto su Web e permette di aggregare facilmente i contenuti di diversi siti e presentarli sotto altre forme.
+
+I feed rss elaborati rispetteranno fedelmente le impostazioni delle portlet, ed in particolar l'applicazione dei filtri per la selezione dei contenuti.
+
+Nella stessa pagina più portlet contentlist possono avere i feed abilitati.
