@@ -2,8 +2,8 @@
 Quickstart
 ==========
 
-Questa pagina fornisce una rapida introduzione a Newportal ed esempi introduttivi.
-Se non hai ancora installato Newportal, vai alla pagina :ref:`installation`.
+Questa pagina fornisce una rapida introduzione a Newportal.
+Se non hai ancora installato **Newportal** vai alla pagina :ref:`installation`.
 
 .. _portlet:
 
