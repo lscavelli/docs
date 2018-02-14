@@ -7,16 +7,18 @@ Requirements
 
     E' necessario assicurarsi che il server soddisfi i seguenti requisiti:
 
-    * PHP >= 7.0.0
+    * PHP >= 7.1.3
     * OpenSSL PHP Extension
     * PDO PHP Extension
     * Mbstring PHP Extension
     * Tokenizer PHP Extension
     * XML PHP Extension
+    * Ctype PHP Extension
+    * JSON PHP Extension
 
 .. note::
 
-	NewPortaL si basa su Laravel ver. 5.5, pertanto i requisiti sono quelli richiesti dal framework Laravel
+	NewPortaL si basa su Laravel ver. 5.6, pertanto i requisiti sono quelli richiesti dal framework Laravel
 
 .. _installation:
 
@@ -53,22 +55,21 @@ Su una macchina di sviluppo
     php artisan migrate --force --seed
 
     # rendere scrivibile le seguenti dir
-    chmod -R 777 storage
-    chmod -R 777 bootstrap/cache
-    chmod -R 774 config
+    chmod -R g+w storage
+    chmod -R g+w bootstrap/cache
 
-    # avviare il server web - http://127.0.0.1:8000
-    php artisan serve
+    # Avvio il server web
+    php artisan serve // http://127.0.0.1:8000
 
     # modificare il file hosts da /etc/hosts (linux)
-    # oppure C:\Windows\System32\drivers\etc\hosts (windows), inserendo:
-    127.0.0.1 newportal.dev
+    # C:\Windows\System32\drivers\etc\hosts (windows), inserendo:
+    127.0.0.1 newportal.test
 
     # installare le dipendenze di front end
     cd public
     bower install
 
-    # credenziali per login - http://newportal.dev:8000/login
+    # credenziali per login - http://newportal.test:8000/login
     username: admin@example.com
     password: admin
 
@@ -112,15 +113,21 @@ Su uno spazio hosting Linux con accesso SSH
     # Attendere qualche minuto. Le tabelle Cities e Countries contengono molti dati
     php artisan migrate --seed
 
+
+    # verificare che i permessi per le cartelle e i file siano impostati correttamente
+    #cd /var/www
+    #chown -R <utente-ftp>:<apache> newportal
+    #find newportal -type f -exec chmod 644 {} \;
+    #find newportal -type d -exec chmod 755 {} \;
+
     # abilitare la scrittura per alcune dir
     chmod -R o+w storage
     chmod -R o+w bootstrap/cache
 
-    # ottimizzare l'autoloader e mettere in cache alcuni file
-    composer dumpautoload -o # oppure con composer dump-autoload --optimize --no-dev
+    # ottimizzare l'autoloader e metto in cache alcuni file
+    composer dumpautoload -o // oppure con composer dump-autoload --optimize --no-dev
     php artisan config:cache
     php artisan route:cache
-    php artisan optimize --force # deprecato
 
     # una volta che si esegue il comando config:cache.
     # due nuovi file saranno creati in bootstrap/cache.
@@ -135,7 +142,6 @@ Su uno spazio hosting Linux con accesso SSH
     # credenziali per login - http://<domain-name>/login
     username: admin@example.com
     password: admin
-
 
 License
 =======
@@ -169,7 +175,7 @@ Contributing
     Per contribuire al progetto si dovrà installare in locale newportal seguendo
     la :ref:`procedura di installer <installation>` indicata nella presente guida.
     Si dovranno installare anche tutte le dipendenze di backend e frontend, utilizzando
-    rispettivamente Composer e bower.
+    rispettivamente Composer e Bower.
     Al termine dei lavori di integrazione/modifica sarà sufficiente aprire una pull request su GitHub
 
     Gli errori, ma anche semplici suggerimenti, possono essere segnalati attraverso

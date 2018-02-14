@@ -6,7 +6,7 @@ NewPortaL Documentation
 
 A new simple and flexible web portals generator. Created and maintained by LFG Scavelli.
 
-Percorso personale di apprendimento e sperimentazione dei framework `Laravel 5.5 <https://laravel.com/>`_ e `Angular 4 <https://angular.io/>`_ e del Module Bundler `Webpack 3 <https://webpack.js.org/>`_. Il presente progetto è open source, sotto licenza MIT, ed è utilizzabile per ogni scopo, personale o commerciale.
+Percorso personale di apprendimento e sperimentazione dei framework `Laravel 5.6 <https://laravel.com/>`_ e `Angular 6 <https://angular.io/>`_ e del Module Bundler `Webpack 4 <https://webpack.js.org/>`_. Il presente progetto è open source, sotto licenza MIT, ed è utilizzabile per ogni scopo, personale o commerciale.
 
 Il pacchetto originario NewPortaL, sviluppato interamente in PHP senza l'ausilio di alcun framework, ha consentito la generazione di numerosi portali orizzontali per la Pubblica Amministrazione e la produzione e gestione di servizi specifici rivolti al cittadino.
 
