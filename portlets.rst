@@ -2,7 +2,7 @@
 Portlets principali
 ===================
 
-Nella pagina Quikstart si è fatto cenno alle :ref:`Portlets <portlet>` come elementi aggregatori di contenuti informativi su una pagina web Newportal.
+Nella pagina Quikstart si è fatto cenno alle :ref:`Portlets <portlet>` come elementi aggregatori di contenuti informativi su una pagina web Newportal. Le portlets possono essere trascinate (in modalità Drag-and-drop) in aree specifiche delle pagine (Dropped aree) in base al modelli di layout adottati.
 Le portlet attualmente disponibili sono:
 
 * :ref:`webcontent <webcontent>`;
