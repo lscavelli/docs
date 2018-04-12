@@ -50,7 +50,11 @@ Uno slug di un contenuto informativo può essere presente nell'url nei seguenti 
 * http://<domain-name>?content=<slug-web-content>
 * http://<domain-name>/<slug-web-content>
 
-Quest'ultima ipotesi sarà attuabile solo e soltanto se risulterà direttamente assegnata al contenuto informativo una pagina di visualizzazione con la presenza di una portlet webcontent che avrà il parametro "predefinita per questa pagina" impostato su "On".
+Quest'ultima ipotesi sarà attuabile solo e soltanto se risulterà assegnata al contenuto informativo una pagina di visualizzazione contenente una portlet di tipo webcontent con il parametro "predefinita per questa pagina" impostato su "On".
+
+.. warning::
+
+    La visualizzazione dinamica è consentita solo se i contenuti passati nell'url riuslteranno pubblici. Modalità predefinita. Se desideriamo disabilitare tale funzionalità dobbiamo salvare il contenuto come "assegnabile solo manulamente".
 
 Condivisione del contentuto
 ---------------------------
@@ -64,6 +68,10 @@ Abilitazione del conteggio delle visite
 ---------------------------------------
 Dal pannello di configurazione della portlet è possibile attivare il conteggio delle visite al contenuto informativo. Il numero complessivo delle visite può essere visualizzato nella sezione web content del cruscotto di amministrazione, in corrispondenza del contenuto interessato. Il dato sarà considerato dalla portlet contenlist per visualizzare la lista dei contenuti più popolari.
 
+Abilitazione dell'evidenziazione della sintassi
+-----------------------------------------------
+Spesso i contenuti informativi includono, al proprio interno, dei frammenti di codice. Per facilitare la lettura di questo particolare testo, la portlet "Webcontent" consente l'abilitazione dell'evidenziazione della sintassi - syntax highlighting. Un sistema che supporta una vasta gamma di linguaggi di programmazione, di markup e di scripting ed effettua la colorazione della sintassi in maniera completamente automatica.
+
 .. _contentlist:
 
 Contentlist portlet
@@ -72,6 +80,10 @@ Contentlist portlet
 La portlet contentlist consente di visualizzare una lista di contenuti formattata in base a determinati modelli scelti nel pannello di configurazione della portlet. Lo stile del contenitore esterno della lista è preimpostato sul modello "listAsset", ma può essere comodamente sostituito con altri modelli, anche custom, presenti nella cartella "view" della portlet "contentlist". In taluni casi si potrebbe aver bisogno di template generici legati espressamente al tema corrente. Questi ultimi sono raccolti nella cartella "partials"  del tema corrente e possono essere selezionati dalla scheda "Altre impostazioni" del pannello di configurazione della portlet.
 
 Attraverso questa portlet la stessa lista può essere utilizzata in più pagine o più volte nella stessa pagina (Multi istanza), assumendo, in base ai modelli scelti, aspetti differenti.
+
+.. warning::
+
+    Nella lista saranno presenti solo i contenuti pubblici ossia quelli che non risulteranno salvati con l'opzione  "assegnabile solo manulamente".
 
 Filtraggio in base ai Tags e Categorie
 --------------------------------------
@@ -112,3 +124,11 @@ I feed  consentono di notificare la pubblicazione di un nuovo contenuto su Web e
 I feed rss elaborati rispetteranno fedelmente le impostazioni delle portlet, ed in particolar l'applicazione dei filtri per la selezione dei contenuti.
 
 Nella stessa pagina più portlet contentlist possono avere i feed abilitati.
+
+.. important::
+
+Attenzione: i feed, se abilitati, sono fruibili anche nel famoso formato JSON Feed Version 1.0.
+
+Site Map
+--------
+Il sistema consente la creazione automatica del file sitemap.xml secondo le specifiche del protocollo sitemap - ver. 0.9 - Il file Raccoglie tutti gli URL delle pagine e dei contenuti delle "portletList" che hanno il sitemap abilitato. L'url delle pagine è di default inserito nel sitemap. Per le portlet "contentList" il sitemap va abilitato dal pannello di configurazione della portlet.
