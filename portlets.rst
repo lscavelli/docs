@@ -127,7 +127,7 @@ Nella stessa pagina più portlet contentlist possono avere i feed abilitati.
 
 .. important::
 
-Attenzione: i feed, se abilitati, sono fruibili anche nel famoso formato JSON Feed Version 1.0.
+    Attenzione: i feed, se abilitati, sono fruibili anche nel famoso formato JSON Feed Version 1.0.
 
 Site Map
 --------
