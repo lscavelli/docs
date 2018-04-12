@@ -54,7 +54,7 @@ Quest'ultima ipotesi sarà attuabile solo e soltanto se risulterà assegnata al 
 
 .. warning::
 
-    La visualizzazione dinamica è consentita solo se i contenuti passati nell'url riuslteranno pubblici. Modalità predefinita. Se desideriamo disabilitare tale funzionalità dobbiamo salvare il contenuto come "assegnabile solo manulamente".
+    La visualizzazione dinamica è consentita solo se i contenuti passati nell'url risultano pubblici (Modalità predefinita) ossia non salvati con l'opzione "gestibili manulamente". Nel caso contrario i contenuti dovranno essere selezionati manualmente attraverso il pannello di configurazione della portlet.
 
 Condivisione del contentuto
 ---------------------------
@@ -83,7 +83,7 @@ Attraverso questa portlet la stessa lista può essere utilizzata in più pagine 
 
 .. warning::
 
-    Nella lista saranno presenti solo i contenuti pubblici ossia quelli che non risulteranno salvati con l'opzione  "assegnabile solo manulamente".
+    Nella lista saranno presenti solo i contenuti pubblici ossia quelli che non risultano salvati con l'opzione  "gestibili manulamente".
 
 Filtraggio in base ai Tags e Categorie
 --------------------------------------
