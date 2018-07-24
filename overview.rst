@@ -27,7 +27,7 @@ Installation
 
     Si presume che, sia in locale che su uno spazio hosting Linux con accesso SSH,
     siano installati i pacchetti Node.js - Npm - PHP - Composer.
-    Una valida alternativa sarebbe l'installazione e l'uso di Homestead, un box Vagrant pre-confezionato
+    Una valida alternativa sarebbe l'installazione e l'uso di Homestead, un box Vagrant pre-configurato
     che fornisce un ambiente di svilupp completo di tutti i pacchetti necessari.
 
 Su una macchina locale di sviluppo
@@ -183,11 +183,11 @@ Contributing
     rispettivamente Composer e npm.
     Al termine dei lavori di integrazione/modifica sarà sufficiente aprire una pull request su GitHub
 
-    Gli errori, ma anche semplici suggerimenti, possono essere segnalati attraverso
+    Gli errori, ma anche semplici suggerimenti, potranno essere segnalati attraverso
     il webform di contatto del sito web o l'email newportalclub@gmail.com.
 
     Sarebbe auspicabile che le vulnerabilità di protezione venissero segnalate con urgenza
-    esclusivamente all'indirizzo di posta elettronica newportalclub@gmail.com
+    esclusivamente tramite indirizzo di posta elettronica newportalclub@gmail.com
 
     E' possibile contribuire al progetto anche in ambiti diversi dallo sviluppo software,
     ovvero nella traduzione dei testi, nell'analisi, nell'eseguire test di unità, nel design etc...

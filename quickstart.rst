@@ -5,20 +5,19 @@ Quickstart
 Questa pagina fornisce una rapida introduzione alle principali caratteristiche di Newportal.
 Se non hai ancora installato **Newportal** vai alla pagina :ref:`installation`.
 
-.. _portlet:
+.. _widget:
 
-Front end with portlets
+Front end with widgets
 =======================
 
-Una **portlet** è un componente modulare che aggrega contenuti informativi su una pagina web.
-Una sorta di plug-in che lavora lato server e consente la pubblicazione di informazioni
-in porzioni di pagina.
-Tramite le portlets lo stesso contenuto è utilizzabile in più pagine o più volte nella
+Un **widget** è un componente modulare che aggrega contenuti informativi su una pagina web.
+Una sorta di plug-in che consente la pubblicazione di informazioni in porzioni di pagina.
+Tramite i widgets lo stesso contenuto è utilizzabile in più pagine o più volte nella
 stessa pagina (Multi istanza).
-Le portlets possono essere trascinate in aree specifiche della pagina in base al
+I widgets possono essere trascinate in aree specifiche della pagina in base al
 modello di layout adottato. Durante il trascinamento si attiva un indicatore di colore
 blue in corrispondenza delle aree di rilascio. All'interno della stessa area sarà
-possibile disporre più portlets e ordinarle diversamente. Grazie al supporto
+possibile disporre più widgets e ordinarle diversamente. Grazie al supporto
 al Drag-and-Drop, le pagine del portale potranno essere riorganizzate rapidamente.
 
 Web Content
@@ -30,7 +29,7 @@ e sui Modelli (Viste di presentazione dei dati).
 Un tool visuale, basato su `Formeo <https://github.com/Draggable/formeo>`_,
 consente agevolmente di costruire, in base alle proprie esigenze, strutture semplici
 e complesse alle quali sarà possibile associare uno o più modelli (dynamic template).
-Lato front-end le portlets possono estrarre Web Content che rispondano a determinate
+Lato front-end i widgets possono estrarre Web Content che rispondano a determinate
 strutture (ex. news / eventi) ed assumere differenti aspetti in base al modello scelto
 per la visualizzazione.
 
@@ -109,7 +108,7 @@ Con l'uso di appositi widgets sarà possibile creare pagine web complete di men
 di navigazione basati su vocabolari di categorie e tags. Gli elementi che aggregano
 i contenuti presenti nella pagina consentiranno di filtrare i dati in base ai
 valori dei vocabolari definiti in configurazione o in base alla categoria passata
-nell'url, se la comunicazione tra portlets è stata abilitata.
+nell'url, se la comunicazione tra widgets è stata abilitata.
 
 Pages, themes and layouts
 =========================
@@ -120,9 +119,9 @@ le pagine. Per impostazione predefinita tutte le pagine vengono automaticamente
 mostrate nei menu di navigazione. Se si vuole omettere tale visualizzazione, la
 pagina dovrà essere creata come nascosta. Le pagine possono essere: - nidificate
 ovvero create come sotto-pagine di altre pagine esistenti; - vuote o precompilate,
-partendo da dei modelli di pagina predefiniti; - di tipo Portlet, URL o Link interno.
+partendo da dei modelli di pagina predefiniti; - di tipo Widget, URL o Link interno.
 In base al tema e al layout scelto, le pagine possono assumere aspetti differenti.
-i layout consentono di specificare come le portlet saranno disposte nelle pagine.
+i layout consentono di specificare come i widgets saranno disposte nelle pagine.
 Possono essere creati e resi disponibili per lo stesso sito diversi layout. 
 Con alcune piccole modifiche sarà possibile utilizzare themes e templates
 fully responsive facilmente reperibili su web
