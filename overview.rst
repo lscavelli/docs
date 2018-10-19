@@ -18,7 +18,7 @@ Requirements
 
 .. note::
 
-	NewPortaL si basa su Laravel ver. 5.6, pertanto i requisiti sono quelli richiesti dal framework Laravel
+	NewPortaL si basa su `Laravel v5.7 <https://laravel.com/>`_, pertanto i requisiti sono quelli richiesti dal framework Laravel
 
 .. _installation:
 
